@@ -1,6 +1,6 @@
-
-import { useEffect, useState} from 'react';
-import { Navigation } from './Navigation';
+import {BrowserRouter, Routes, Route, Link, Router} from "react-router-dom"
+import { useState} from 'react';
+// import { Navigation } from './Navigation';
 // import {Projects} from './Projects.jsx';
 import myPic from './assets/tender.jpg';
 import tenderlyImg from './assets/tenderly.jpg'
@@ -56,7 +56,11 @@ const dayTime = () => {
 
             {/* ---------------navigation section------------ */}
             <section className='navigation'>
-                <Navigation/>
+                <BrowserRouter>
+                    <Routes>
+                        <Route></Route>
+                    </Routes>
+                </BrowserRouter>
             </section>
 
             {/* the first div nested inside the main wrapper div */}
@@ -127,6 +131,7 @@ const dayTime = () => {
 
             </div>
             <Footer/>
+            <p>This is only for the try out branch</p>
         </div>
     );    
 }
