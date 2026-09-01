@@ -1,0 +1,326 @@
+
+/* Finally i have my own portfolio Yayyyy meeeee */
+
+:root{
+    background: linear-gradient(135deg, #181818, #1e222c);
+    color: #CFCFCF;
+    --outlineColor: rgba(165, 114, 152, 0.696);
+    --infoBgColor: #17040f4e;
+    --btnBg: #f9c4d2;
+    --btnShadow: #b18597;
+    --btnHighlight: #ffe9e9;
+
+
+}
+
+
+
+/* first main div styling begins here */
+body{
+    margin: 0;
+    scroll-behavior: smooth;
+    
+}
+
+.dayToggle{
+    display: block;
+    position: fixed;      
+    z-index: 9999;
+    
+    
+
+}
+.positon{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    flex-direction: column;
+}
+
+.main-div h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(100deg,  #EDB8D6, #F9E2F1,rgb(177, 130, 177), #9c5f83, #EDB8D6);
+    background-size: 250% 100%;
+    background-position: 0% 0%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    color: transparent;
+    animation: flow 8s linear infinite;
+    
+}
+
+
+@keyframes flow {
+    to{
+        background-position: 250% 0;
+    }
+    
+}
+.main-div p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(225, 156, 207, 0.639);
+    
+}
+
+
+
+.main-div .main-btn{
+    width: 150px;
+    height: 4%;
+    
+    background-color: var(--btnBg);
+    border: rgb(45, 11, 21) 2px solid;
+    box-shadow: 5px 5px 2px var(--btnShadow);
+
+
+    
+}
+
+.main-btn a{
+    text-decoration: none;
+    color: #2a0714;
+}
+
+
+
+#myPicture{
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 1px 3px 15px white;
+}
+
+/* main div styling ends here */
+
+/* about me div syling begins here */
+.aboutMe{
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    gap: 40px;
+    
+}
+
+
+/* the styling below is for the about and skill section */
+.about-text, .skills h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+                    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.about-text-decor{
+    width: 65px;
+    height: 2px;
+    background-color: rgb(123, 51, 115);
+    margin: 20px auto;
+    
+} /* which ends here */
+
+
+
+.infoCard{
+    background-color: var(--infoBgColor);
+    width: 300px;
+    min-height: 200px;
+    border: 1px var(--outlineColor)  solid;
+    border-radius: 20px 40% / 20% 15%;
+    box-shadow: 3px 5px 8px #171717 ,
+                -3px -5px 8px rgb(17, 17, 17);
+    padding: 20px;
+    transition: transform 0.8s ease, box-shadow 0.9s ease,border-color 0.3s ease;
+
+    
+}
+
+.infoCard, .infoCard li{
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    font-style: italic;
+}
+.infoCard h3{
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    color: #c984acb1;
+    text-align: center;
+}
+
+.skills{
+    margin-top: 120px;
+}
+.thirdRect li{
+    list-style-type: none ;
+    
+    margin: 5px;
+    padding-left: 5px;
+}
+
+.thirdRect li::before{
+    content: ' ➜ ';
+}
+
+.infoCard:hover{
+    transform: translateY(-10px);
+    border: 1px rgba(235, 128, 208, 0.895) solid; 
+    box-shadow: 2px 2px 15px #8f457c,-2px -2px 15px #f6e2f0;
+}
+/* second div styling ends here */
+
+.skills p{
+    font-family: monospace;
+    text-align: center;
+    margin: 30px auto;
+}
+
+
+/* ---------soft skill styling...^~^------------- */
+
+.softSkills{
+    width: 300px;
+    height: 200px;
+    border: 2px solid var(--outlineColor);
+    background-color: var(--infoBgColor);
+    border-radius: 70px 5px/ 30px 70px;
+    margin: 15% 10%;
+}
+
+.softSkillsList{
+    list-style-type: none ;
+}
+
+.softSkillsList li::before{
+    content: "⤷  ";
+    color: #D183A9;
+}
+
+.skillH3{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* -------------technical skills styling---------------- */
+
+.technicalSkills{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.skillUp {
+    animation: floatUp 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+
+.skillDown{
+    animation: floatDown 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(8px);
+    }
+    
+}
+
+
+
+/* ----------------footer section--------------------------*/
+Footer{
+    text-align: center;
+}
+
+/* #FCE8F3; */
+
+a{
+    color: #f4c9dd;
+}
+
+
+a:hover{
+    color: #d985ae;
+}
+
+
+@media screen and (max-width : 768px) {
+
+    .positon{
+    padding: 0;
+    margin: 20px;
+    
+}
+
+
+
+
+    #myPicture {
+        width: 60%;
+        border: none;
+        animation: globby 10s linear infinite alternate forwards;
+    }
+
+    @keyframes globby {
+
+        0%, 100% {
+        box-shadow: 15px 0px 15px rgba(127, 91, 128, 0.5), 
+                    -15px 0px 15px rgba(163, 98, 132, 0.88);
+    }
+    25% {
+        box-shadow: 0px 15px 15px rgba(127, 91, 128, 0.5), 
+                    0px -15px 15px rgba(163, 98, 132, 0.88);
+    }
+    50% {
+        box-shadow: -15px 0px 15px rgba(127, 91, 128, 0.5), 
+                    15px 0px 15px rgba(163, 98, 132, 0.88);
+    }
+    75% {
+        box-shadow: 0px -15px 15px rgba(127, 91, 128, 0.5), 
+                    0px 15px 15px rgba(163, 98, 132, 0.88);
+    }
+
+    }
+
+
+
+.main-div h1{
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.main-div p{
+    text-align: center;
+}
+
+}
+
+
+
+
