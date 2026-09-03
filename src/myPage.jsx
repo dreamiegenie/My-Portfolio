@@ -131,7 +131,7 @@ const dayTime = () => {
 
             </div>
             <Footer/>
-            <p>This is only for the try out branch</p>
+            
         </div>
     );    
 }
